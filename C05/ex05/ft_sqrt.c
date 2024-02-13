@@ -6,7 +6,7 @@
 /*   By: cari <cari@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 17:39:34 by cari              #+#    #+#             */
-/*   Updated: 2024/02/11 20:53:14 by cari             ###   ########.fr       */
+/*   Updated: 2024/02/13 15:52:22 by cari             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_sqrt(int nb)
 	while ((long) res * res != (long) nb)
 	{
 		res++;
-		if (res * res > nb)
+		if ((long) res * res > (long) nb)
 			return (0);
 	}
 	return (res);
