@@ -6,7 +6,7 @@
 /*   By: cari <cari@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 16:54:16 by cari              #+#    #+#             */
-/*   Updated: 2024/02/11 16:57:22 by cari             ###   ########.fr       */
+/*   Updated: 2024/02/13 22:19:02 by cari             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ unsigned int	ft_strlen(char *str);
 
 int	main(int argc, char **argv)
 {
-	int counter;
+	int	counter;
 
 	counter = 1;
 	if (argc != 1)

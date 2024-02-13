@@ -6,7 +6,7 @@
 /*   By: cari <cari@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 21:14:59 by cari              #+#    #+#             */
-/*   Updated: 2024/02/11 21:41:02 by cari             ###   ########.fr       */
+/*   Updated: 2024/02/13 22:18:46 by cari             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,23 +49,23 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-unsigned int	ft_strlen(char **str)
+unsigned int	ft_strlen(char *str)
 {
 	int	counter;
 
 	counter = 0;
-	while (str[counter] != NULL)
+	while (str[counter] != '\0')
 		counter++;
 	return (counter);
 }
 
-void	ft_sort_int_tab(char **tab)
+void	ft_sort_int_tab(char **tab, int argc)
 {
-	unsigned int	counter;
-	char			*tmp;
+	int		counter;
+	char	*tmp;
 
 	counter = 1;
-	while (counter <= ft_strlen(tab) -2)
+	while (counter <= argc -2)
 	{
 		if (ft_strcmp(tab[counter], tab[counter +1]) == 1)
 		{
@@ -88,10 +88,10 @@ int	main(int argc, char **argv)
 		return (0);
 	else
 	{
-		ft_sort_int_tab(argv);
+		ft_sort_int_tab(argv, argc);
 		while (argv[counter] != NULL)
 		{
-			write(1, argv[counter], 5);
+			write(1, argv[counter], ft_strlen(argv[counter]));
 			write(1, "\n", 1);
 			counter++;
 		}
