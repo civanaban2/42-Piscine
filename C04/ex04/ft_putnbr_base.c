@@ -6,7 +6,7 @@
 /*   By: cari <cari@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 20:49:57 by cari              #+#    #+#             */
-/*   Updated: 2024/02/09 21:20:58 by cari             ###   ########.fr       */
+/*   Updated: 2024/02/13 23:15:33 by cari             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,22 +55,27 @@ int	ft_strlen(char *str)
 
 int	base_control(char *base)
 {
-	int	counter1;
-	int	counter2;
+	int	c1;
+	int	c2;
 
-	counter1 = 0;
-	counter2 = 1;
-	while (base[counter1] != '\0')
+	c1 = 0;
+	c2 = 1;
+	while (base[c1] != '\0')
 	{
-		while (base[counter2] != '\0')
+		if (base[c1] == '+' || base[c1] == '-')
+			return (0);
+		if (base[c1] == '\t' || base[c1] == '\n' || base[c1] == '\v'
+			|| base[c1] == '\f' || base[c1] == '\r' || base[c1] == ' ')
+			return (0);
+		while (base[c2] != '\0')
 		{
-			if (base[counter1] != base[counter2])
-				counter2++;
+			if (base[c1] != base[c2])
+				c2++;
 			else
 				return (0);
 		}
-		counter1++;
-		counter2 = counter1 +1;
+		c1++;
+		c2 = c1 +1;
 	}
 	return (1);
 }
