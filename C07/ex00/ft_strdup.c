@@ -6,7 +6,7 @@
 /*   By: cari <cari@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 14:16:42 by cari              #+#    #+#             */
-/*   Updated: 2024/02/13 14:23:22 by cari             ###   ########.fr       */
+/*   Updated: 2024/02/13 17:45:02 by cari             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strdup(char *src)
 	char	*ptr;
 
 	counter = 0;
-	while (src[counter] != '\0')
+	while (src[counter])
 		counter++;
 	ptr = (char *)malloc(counter * sizeof(char));
 	counter = 0;
-	while (src[counter] != '\0')
+	while (src[counter])
 	{
 		ptr[counter] = src[counter];
 		counter++;
