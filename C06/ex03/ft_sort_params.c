@@ -6,7 +6,7 @@
 /*   By: cari <cari@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 21:14:59 by cari              #+#    #+#             */
-/*   Updated: 2024/02/14 04:18:59 by cari             ###   ########.fr       */
+/*   Updated: 2024/02/14 15:40:45 by cari             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,9 @@ int	ft_strcmp(char *s1, char *s2)
 	while (s1[counter] != '\0' && s2[counter] != '\0')
 	{
 		if (s1[counter] == s2[counter])
-		{
 			counter++;
-			continue ;
-		}
 		else
-		{
-			if (s1[counter] > s2[counter])
-				return (1);
-			else
-				return (-1);
-		}
+			break ;
 	}
 	if (s1[counter] - s2[counter] > 0)
 		return (1);
