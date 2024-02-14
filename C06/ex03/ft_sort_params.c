@@ -6,7 +6,7 @@
 /*   By: cari <cari@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 21:14:59 by cari              #+#    #+#             */
-/*   Updated: 2024/02/13 22:18:46 by cari             ###   ########.fr       */
+/*   Updated: 2024/02/14 04:18:59 by cari             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,10 @@ int	ft_strcmp(char *s1, char *s2)
 				return (-1);
 		}
 	}
-	return (0);
-}
-
-char	*ft_strcpy(char *dest, char *src)
-{
-	int	n;
-
-	n = 0;
-	while (src[n] != '\0' )
-	{
-		dest[n] = src[n];
-		n++;
-	}
-	dest[n] = src[n];
-	return (dest);
+	if (s1[counter] - s2[counter] > 0)
+		return (1);
+	else
+		return (-1);
 }
 
 unsigned int	ft_strlen(char *str)
