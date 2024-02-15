@@ -6,7 +6,7 @@
 /*   By: cari <cari@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 04:05:24 by cari              #+#    #+#             */
-/*   Updated: 2024/02/15 00:05:46 by cari             ###   ########.fr       */
+/*   Updated: 2024/02/15 08:25:21 by cari             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,16 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 
 	length_strs = total(size, strs);
 	length_sep = 0;
+	if (length_strs == 0)
+	{
+		ptr = (char *)malloc(0);
+		return (ptr);
+	}
 	while (sep[length_sep])
 		length_sep++;
 	ptr = (char *)malloc(length_strs + (size -1) * length_sep +1);
+	if (!ptr)
+		return (0);
 	printer(size, strs, sep, ptr);
 	return (ptr);
 }

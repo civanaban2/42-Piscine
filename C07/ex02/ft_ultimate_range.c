@@ -6,7 +6,7 @@
 /*   By: cari <cari@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 19:31:41 by cari              #+#    #+#             */
-/*   Updated: 2024/02/14 16:17:42 by cari             ###   ########.fr       */
+/*   Updated: 2024/02/15 08:21:53 by cari             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,10 @@ int	ft_ultimate_range(int **range, int min, int max)
 		*range = NULL;
 		return (0);
 	}
+	if (!ptr)
+		return (-1);
 	while (counter < my_range)
-	{
-		ptr[counter] = min;
-		counter++;
-		min++;
-	}
+		ptr[counter++] = min++;
 	*range = ptr;
 	return (my_range);
 }
